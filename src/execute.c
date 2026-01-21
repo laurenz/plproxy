@@ -721,11 +721,7 @@ remote_execute(ProxyFunction *func, FunctionCallInfo fcinfo)
 	}
 
 	if (func->retset)
-	{
-		tuplestore_donestoring(rsinfo->setResult);
-
 		cluster->ret_total = tuplestore_tuple_count(rsinfo->setResult);
-	}
 }
 
 static void

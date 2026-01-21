@@ -25,6 +25,8 @@
 
 #include "plproxy.h"
 
+#include <arpa/inet.h>
+
 static bool
 name_matches(ProxyFunction *func, const char *aname, PGresult *res, int col)
 {
